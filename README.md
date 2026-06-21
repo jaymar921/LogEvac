@@ -16,6 +16,18 @@ Choose your preferred installation method:
 | **NuGet Package Manager Console** | `Install-Package LogEvac -Version 1.0.0` |
 | **.csproj PackageReference** | `<PackageReference Include="LogEvac" Version="1.0.0" />` |
 
+## 🔗 Example Project
+
+**[Project-Serilog](https://github.com/jaymar921/Project-SerilogDI)** - Complete working reference implementation
+
+This repository demonstrates:
+- ✅ Full LogEvac integration setup
+- ✅ Hangfire configuration with InMemoryStorage
+- ✅ Serilog MSSQL sink configuration
+- ✅ Dependency injection patterns
+
+**Perfect for:** Getting started quickly or understanding integration patterns
+
 
 ## 📋 Table of Contents
 
@@ -25,6 +37,7 @@ Choose your preferred installation method:
 - [Configuration](#configuration)
 - [Getting Started](#getting-started)
 - [Configuration Options](#configuration-options)
+- [Example Project](#example-project)
 - [Troubleshooting](#troubleshooting)
 - [License](#license)
 
