@@ -6,6 +6,29 @@
 
 **LogEvac** is a lightweight .NET library that automatically removes old log records from SQL Server databases configured with Serilog MSSQL sinks. Perfect for keeping your logging database lean and performant without manual intervention.
 
+## 📦 Quick Install
+
+Choose your preferred installation method:
+
+| Method | Command |
+|--------|---------|
+| **.NET CLI** | `dotnet add package LogEvac --version 1.0.2` |
+| **NuGet Package Manager Console** | `Install-Package LogEvac -Version 1.0.2` |
+| **.csproj PackageReference** | `<PackageReference Include="LogEvac" Version="1.0.2" />` |
+
+## 🔗 Example Project
+
+**[Project-Serilog](https://github.com/jaymar921/Project-SerilogDI)** - Complete working reference implementation
+
+This repository demonstrates:
+- ✅ Full LogEvac integration setup
+- ✅ Hangfire configuration with InMemoryStorage
+- ✅ Serilog MSSQL sink configuration
+- ✅ Dependency injection patterns
+
+**Perfect for:** Getting started quickly or understanding integration patterns
+
+
 ## 📋 Table of Contents
 
 - [Features](#features)
@@ -14,6 +37,7 @@
 - [Configuration](#configuration)
 - [Getting Started](#getting-started)
 - [Configuration Options](#configuration-options)
+- [Example Project](#example-project)
 - [Troubleshooting](#troubleshooting)
 - [License](#license)
 
