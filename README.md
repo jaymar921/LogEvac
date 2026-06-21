@@ -1,4 +1,4 @@
-# LogEvac
+# LogEvac [![NuGet Version](https://img.shields.io/nuget/v/LogEvac.svg?style=flat)](https://www.nuget.org/packages/LogEvac/)&nbsp;[![NuGet Downloads](https://img.shields.io/nuget/dt/logevac.svg)](https://www.nuget.org/packages/LogEvac/)
 
 > Automated log cleanup library for .NET applications using Serilog MSSQL sinks
 >
