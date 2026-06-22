@@ -2,11 +2,17 @@
 
 using LogEvac.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 public class SerilogDatabaseContext : BaseDatabaseContext<SerilogDatabaseContext>
 {
-    public SerilogDatabaseContext(DbContextOptions<SerilogDatabaseContext> options) : base(options)
+    private readonly LogEvacSettings _settings;
+    private readonly string _tableName;
+
+    public SerilogDatabaseContext(DbContextOptions<SerilogDatabaseContext> options, IOptions<LogEvacSettings> options1) : base(options)
     {
+        _settings = options1.Value;
+        _tableName = _settings.LoggingTable ?? "LogEvents";
     }
 
     public DbSet<LogEvent> LogEvents { get; set; }
@@ -15,7 +21,7 @@ public class SerilogDatabaseContext : BaseDatabaseContext<SerilogDatabaseContext
     {
         modelBuilder.Entity<LogEvent>(entity =>
         {
-            entity.ToTable("LogEvents");
+            entity.ToTable(_tableName);
             entity.HasKey(e => e.Id);
         });
 

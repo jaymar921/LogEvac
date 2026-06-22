@@ -12,9 +12,9 @@ Choose your preferred installation method:
 
 | Method | Command |
 |--------|---------|
-| **.NET CLI** | `dotnet add package LogEvac --version 1.0.3` |
-| **NuGet Package Manager Console** | `Install-Package LogEvac -Version 1.0.3` |
-| **.csproj PackageReference** | `<PackageReference Include="LogEvac" Version="1.0.3" />` |
+| **.NET CLI** | `dotnet add package LogEvac --version 1.0.4` |
+| **NuGet Package Manager Console** | `Install-Package LogEvac -Version 1.0.4` |
+| **.csproj PackageReference** | `<PackageReference Include="LogEvac" Version="1.0.4" />` |
 
 ## 🔗 Example Project
 
@@ -103,8 +103,9 @@ Add the logging connection string and LogEvac settings:
     "LoggingDb": "Data Source=(localdb)\\MSSQLLocalDB;Integrated Security=true;Database=Logs"
   },
   "LogEvacSettings": {
-    "AppName": "MyApplicationName",
+    "ApplicationName": "MyApplicationName",
     "Environment": "Production",
+    "LoggingTable": "LogEvents",
     "CheckingFrequencyInMinutes": 0,
     "CheckingFrequencyInHours": 2,
     "CleanUpDataOlderThanMinutesValue": 0,
@@ -165,8 +166,9 @@ The `LogEvacSettings` section controls LogEvac behavior:
 
 | Setting | Type | Default | Description |
 |---------|------|---------|-------------|
-| `AppName` | string | - | **Required.** Application name to match in Serilog logs |
+| `ApplicationName` | string | - | **Required.** Application name to match in Serilog logs |
 | `Environment` | string | - | Environment name (e.g., "Production", "Staging") |
+| `LoggingTable` | string | "LogEvents" | Name of the logging table in the database |
 | `CheckingFrequencyInMinutes` | int | 0 | Cleanup frequency in minutes (overrides hours if > 0) |
 | `CheckingFrequencyInHours` | int | 2 | Cleanup frequency in hours (used if minutes is 0) |
 | `CleanUpDataOlderThanMinutesValue` | int | 0 | Delete logs older than X minutes (overrides all if > 0) |
@@ -185,7 +187,7 @@ The `LogEvacSettings` section controls LogEvac behavior:
 ```json
 {
   "LogEvacSettings": {
-    "AppName": "MyApp",
+    "ApplicationName": "MyApp",
     "Environment": "Production",
     "CheckingFrequencyInMinutes": 30,
     "CleanUpDataOlderThanDaysValue": 7
@@ -209,7 +211,7 @@ The `LogEvacSettings` section controls LogEvac behavior:
 **Problem:** Cleanup job runs but doesn't delete logs.
 
 **Solutions:**
-- Check that the `AppName` in settings matches the Serilog `ApplicationName` column values
+- Check that the `ApplicationName` in settings matches the Serilog `ApplicationName` column values
 - Verify the cleanup age criteria (minutes, days, weeks, or months) is set correctly
 - Ensure the Serilog MSSQL sink has the `ApplicationName` column in the logs table
 - Check Hangfire Dashboard to see job execution history and errors

@@ -6,10 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<PackageId>LogEvac</PackageId>
-	<Version>1.0.3</Version>
+	<Version>1.0.4</Version>
 	<Authors>JayMar921</Authors>
 	<Description>A lightweight .NET library that automatically removes old log records from SQL Server databases configured with Serilog MSSQL sinks</Description>
-	<PackageTags>utilities;logclean;log-cleaner</PackageTags>
+	<PackageTags>utilities;logclean;log-cleaner;log cleaner;logging;serilog cleaner;</PackageTags>
 	<RepositoryUrl>https://github.com/jaymar921/LogEvac</RepositoryUrl>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageReadmeFile>readme.md</PackageReadmeFile>
