@@ -10,11 +10,14 @@
 
 Choose your preferred installation method:
 
-| Method | Command |
-|--------|---------|
-| **.NET CLI** | `dotnet add package LogEvac --version 1.0.4` |
-| **NuGet Package Manager Console** | `Install-Package LogEvac -Version 1.0.4` |
-| **.csproj PackageReference** | `<PackageReference Include="LogEvac" Version="1.0.4" />` |
+| Method | Command | .NET Version |
+|--------|---------|---------|
+| **.NET CLI** | `dotnet add package LogEvac --version 1.1.0` | 10 |
+| **NuGet Package Manager Console** | `Install-Package LogEvac -Version 1.1.0` | 10 |
+| **.csproj PackageReference** | `<PackageReference Include="LogEvac" Version="1.1.0" />` | 10 |
+| **.NET CLI** | `dotnet add package LogEvac --version 1.0.4` | 8 |
+| **NuGet Package Manager Console** | `Install-Package LogEvac -Version 1.0.4` | 8 |
+| **.csproj PackageReference** | `<PackageReference Include="LogEvac" Version="1.0.4" />` | 8 |
 
 ## 🔗 Example Project
 
