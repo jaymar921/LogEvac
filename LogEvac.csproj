@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<PackageId>LogEvac</PackageId>
-	<Version>1.0.4</Version>
+	<Version>1.1.0</Version>
 	<Authors>JayMar921</Authors>
 	<Description>A lightweight .NET library that automatically removes old log records from SQL Server databases configured with Serilog MSSQL sinks</Description>
 	<PackageTags>utilities;logclean;log-cleaner;log cleaner;logging;serilog cleaner;</PackageTags>
@@ -18,8 +18,8 @@
 
   <ItemGroup>
     <PackageReference Include="Hangfire" Version="1.8.23" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.28" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.28" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.9" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,8 +29,8 @@
     <None Update="README.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-	<None Include="docs\readme.md" Pack="true" PackagePath="\"/>
-	<None Include="docs\icon.png" Pack="true" PackagePath="\"/>
+	<None Include="docs\readme.md" Pack="true" PackagePath="\" />
+	<None Include="docs\icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
